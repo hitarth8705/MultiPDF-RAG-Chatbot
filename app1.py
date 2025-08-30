@@ -11,11 +11,11 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
-#  Load environment variables 
+
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-#  Ensure event loop exists for async clients
+
 def ensure_event_loop():
     try:
         asyncio.get_running_loop()
@@ -77,7 +77,7 @@ def user_input(user_question):
 #   Streamlit  
 def main():
     st.set_page_config("Chat PDF")
-    st.header("Chat with PDF using Gemini 💁")
+    st.header("Chat with PDF ")
 
     user_question = st.text_input("Ask a Question from the PDF Files")
     if user_question:
